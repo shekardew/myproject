@@ -1,1 +1,1 @@
-<?php include_once("my_plugin.html") ?>
+<?php include_once("my_app.html") ?>
