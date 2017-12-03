@@ -1,0 +1,1 @@
+<?php include-once("my_plugin.html") ?>
