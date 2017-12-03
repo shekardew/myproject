@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Handler</title>
+</head>
+<body>
+    <h2>
+        Hi This is my first stream app.</h2>
+    <br />
+    <a href="#" onclick="hsp.showUser('hootsuite'); return false;">Show @hootsuite info</a>
+
+    <script src="https://d2l6uygi1pgnys.cloudfront.net/jsapi/2-0/hsp.js" type="text/javascript"></script>
+
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+-->
+
+    <script type="text/javascript">
+
+        hsp.init({});
+        hsp.bind('refresh', function() {
+            window.location.reload();
+        });
+
+        hsp.bind('dropuser', function(username, tweetID) {
+            hsp.showUser(username);
+        });
+
+        //        function sendToAppHandler(message) {
+        //            var messageId = "messageId=" + encodeURIComponent(message.post.id);
+        //            var datetime = "&datetime=" + encodeURIComponent(message.post.datetime);
+        //            var message = "&message=" + encodeURIComponent(message.post.content.body);
+        //            var handler = 'https://localhost/my_handler.html?' + messageId + datetime + message;
+
+        //            hsp.showCustomPopup(handler, 'App Plugin popup');
+        //        }
+
+    </script>
+
+</body>
+</html>
