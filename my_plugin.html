@@ -21,7 +21,7 @@
             var messageId = "messageId=" + encodeURIComponent(message.post.id);
             var datetime = "&datetime=" + encodeURIComponent(message.post.datetime);
             var message = "&message=" + encodeURIComponent(message.post.content.body);
-            var handler = 'https://localhost/my_handler.html?' + messageId + datetime + message;
+            var handler = 'https://https://vsmyapp2017.herokuapp.com/my_handler.html?' + messageId + datetime + message;
 
             hsp.showCustomPopup(handler, 'App Plugin popup');
         }
