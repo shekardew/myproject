@@ -7,6 +7,16 @@
     <script src="https://d2l6uygi1pgnys.cloudfront.net/jsapi/2-0/hsp.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
+        
+        function sendToAppHandler(message) {
+            var messageId = "messageId=" + encodeURIComponent(message.post.id);
+            var datetime = "&datetime=" + encodeURIComponent(message.post.datetime);
+            var message = "&message=" + encodeURIComponent(message.post.content.body);
+            var handler = 'https://vsmyapp2017.herokuapp.com/my_handler.html?' + messageId + datetime + message;
+
+            hsp.showCustomPopup(handler, 'App Plugin popup');
+        }
+        
         $(document).ready(function() {
             var hsp_params = {};
 
@@ -16,15 +26,6 @@
                 sendToAppHandler(message);
             });
         });
-
-        function sendToAppHandler(message) {
-            var messageId = "messageId=" + encodeURIComponent(message.post.id);
-            var datetime = "&datetime=" + encodeURIComponent(message.post.datetime);
-            var message = "&message=" + encodeURIComponent(message.post.content.body);
-            var handler = 'https://vsmyapp2017.herokuapp.com/my_handler.html?' + messageId + datetime + message;
-
-            hsp.showCustomPopup(handler, 'App Plugin popup');
-        }
 
     </script>
     
