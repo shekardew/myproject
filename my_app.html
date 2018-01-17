@@ -15,12 +15,12 @@
 -->
 
     <script type="text/javascript">
-
+    $(document).ready(function(){
         hsp.init({});
         hsp.bind('refresh', function() {
             alert("Refresh");
         });
-
+    });
         hsp.bind('dropuser', function(username, tweetID) {
             hsp.showUser(username);
         });
